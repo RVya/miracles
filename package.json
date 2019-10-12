@@ -1,0 +1,73 @@
+{
+  "name": "Vue-Admin-magic",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build-pre": " vue-cli-service build --mode preProduction",
+    "build-test": "vue-cli-service build --mode test",
+    "commit": "npx git-cz",
+    "dev": "yarn run serve",
+    "analysis": "vue-cli-service build --mode analysis"
+  },
+  "dependencies": {
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "stylus": "^0.54.5",
+    "vue": "^2.6.10",
+    "vue-i18n": "^8.3.2",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.0.1",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-monitor": "^1.0.14"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.1.1",
+    "@vue/cli-plugin-eslint": "^3.1.5",
+    "@vue/cli-service": "^3.8.0",
+    "axios": "^0.18.0",
+    "babel-eslint": "^10.0.1",
+    "commitizen": "^3.0.5",
+    "cors": "^2.8.5",
+    "cz-emoji": "^1.1.2",
+    "element-ui": "^2.4.11",
+    "eslint": "^5.9.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "js-cookie": "^2.2.0",
+    "nprogress": "^0.2.0",
+    "request": "^2.88.0",
+    "stylus-loader": "^3.0.2",
+    "svg-sprite-loader": "^4.1.3",
+    "vue-bus": "^1.2.1",
+    "vue-cli-plugin-i18n": "^0.5.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "globals": {
+      "$t": true
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
