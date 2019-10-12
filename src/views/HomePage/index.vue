@@ -1,5 +1,7 @@
 <template>
-  <div>首页呀</div>
+  <div>
+
+  </div>
 </template>
 
 <script>

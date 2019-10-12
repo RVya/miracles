@@ -11,7 +11,8 @@ router.beforeEach((to, from, next) => {
   }
 
   NProgress.start()
-  const userLogin = false
+  const userLogin = sessionStorage.getItem('email')
+
   if (!userLogin) {
     if (to.path === '/login') {
       next()

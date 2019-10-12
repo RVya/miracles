@@ -97,12 +97,14 @@ export default {
     }
   },
   created() {
+
+    const email = sessionStorage.getItem('email')
     this.$axios
-      .get(API_BASE + "/v2/userinfo")
+      .get(API_BASE + "/api/user/search" + `?email=${email}`)
       .then(res => {
         if (res.errno !== -1) {
           this.user = res.data;
-          sessionStorage.setItem("secretUser", JSON.stringify(res.data));
+          sessionStorage.setItem("secretUser", JSON.stringify(this.user));
         }
       })
       .catch(() => {});

@@ -55,7 +55,6 @@
 
 <script>
 const version = require("../../../package.json").version;
-const API_BASE = ''
 
 export default {
   name: "Login",
@@ -78,16 +77,17 @@ export default {
 
       this.loading = true;
       this.$axios
-        .post("http://localhost:8868/api/user/login", {
+        .post("/api/login", {
           email: this.email,
-          password: this.password,
-          type: 1
+          password: this.password
         })
-        .then(() => {
-          sessionStorage.setItem("secretUser", "fake");
+        .then((res) => {
+          sessionStorage.setItem("email", res.data.email);
           this.$router.push({
             path: "/index"
           });
+          this.loading = false;
+
         })
         .catch(() => {
           this.loading = false;

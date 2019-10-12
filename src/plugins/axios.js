@@ -33,13 +33,13 @@ axiosInstance.interceptors.request.use(
 axiosInstance.interceptors.response.use(
   response => {
     const res = response.data
-    if (res.errno * 1 !== 0) {
+    if (res.code * 1 !== 0) {
       Notification({
         message: res.errmsg || i18n.t('error.unknown'),
         type: 'error',
         duration: 2 * 1000
       })
-      if (res.errno == -2) {
+      if (res.code == -2) {
         sessionStorage.removeItem('secretUser')
         location.href = '#/login'
       }

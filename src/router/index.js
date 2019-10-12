@@ -21,7 +21,7 @@ export const constantRouterMap = [
       {
         path: '/index',
         meta: {
-          title: '首页中心',
+          title: '用户中心',
           icon: 'home-page'
         },
         name: 'HomePage',
@@ -29,24 +29,7 @@ export const constantRouterMap = [
         component: () => import('@/views/HomePage/index')
       }
     ]
-  },
-  {
-    path: '/page',
-    hidden: false,
-    component: Layout,
-    children: [
-      {
-        path: '/page/index',
-        meta: {
-          title: '页面',
-          icon: 'home-page'
-        },
-        name: 'HomePage',
-        hidden: false,
-        component: () => import('@/views/Page/index')
-      }
-    ]
-  },
+  }
 ]
 
 /* Global Route */
